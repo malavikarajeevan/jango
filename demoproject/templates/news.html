@@ -1,3 +1,4 @@
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,13 +7,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Travello template project">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap4/bootstrap.min.css'%}">
 <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
-<link rel="stylesheet" type="text/css" href="styles/news.css">
-<link rel="stylesheet" type="text/css" href="styles/news_responsive.css">
+<link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/owl.carousel.css'%}">
+<link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/owl.theme.default.css'%}">
+<link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/animate.css'%}">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/news.css'%}">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/news_responsive.css'%}">
 </head>
 <body>
 
@@ -93,7 +94,7 @@
 	<!-- Home -->
 
 	<div class="home">
-		<div class="background_image" style="background-image:url(images/news.jpg)"></div>
+		<div class="background_image" style="background-image:url({% static 'images/news.jpg'%})"></div>
 	</div>
 
 	<!-- Search -->
@@ -133,7 +134,7 @@
 						
 						<!-- News Post -->
 						<div class="news_post">
-							<div class="news_post_image"><img src="images/news_4.jpg" alt=""></div>
+							<div class="news_post_image"><img src="{% static 'images/news_4.jpg'%}" alt=""></div>
 							<div class="news_post_content">
 								<div class="news_post_date d-flex flex-row align-items-end justify-content-start">
 									<div>02</div>
@@ -154,7 +155,7 @@
 
 						<!-- News Post -->
 						<div class="news_post">
-							<div class="news_post_image"><img src="images/news_5.jpg" alt=""></div>
+							<div class="news_post_image"><img src="{% static 'images/news_5.jpg'%}" alt=""></div>
 							<div class="news_post_content">
 								<div class="news_post_date d-flex flex-row align-items-end justify-content-start">
 									<div>02</div>
@@ -175,7 +176,7 @@
 
 						<!-- News Post -->
 						<div class="news_post">
-							<div class="news_post_image"><img src="images/news_6.jpg" alt=""></div>
+							<div class="news_post_image"><img src="{% static 'images/news_6.jpg'%}" alt=""></div>
 							<div class="news_post_content">
 								<div class="news_post_date d-flex flex-row align-items-end justify-content-start">
 									<div>02</div>
@@ -375,12 +376,12 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	</footer>
 </div>
 
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="styles/bootstrap4/popper.js"></script>
-<script src="styles/bootstrap4/bootstrap.min.js"></script>
-<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
-<script src="plugins/easing/easing.js"></script>
-<script src="plugins/parallax-js-master/parallax.min.js"></script>
-<script src="js/news.js"></script>
+<script src="{% static 'js/jquery-3.2.1.min.js'%}"></script>
+<script src="{% static 'styles/bootstrap4/popper.js'%}"></script>
+<script src="{% static 'styles/bootstrap4/bootstrap.min.js'%}"></script>
+<script src="{% static 'plugins/OwlCarousel2-2.2.1/owl.carousel.js'%}"></script>
+<script src="{% static 'plugins/easing/easing.js'%}"></script>
+<script src="{% static 'plugins/parallax-js-master/parallax.min.js'%}"></script>
+<script src="{% static 'js/news.js'%}"></script>
 </body>
 </html>
