@@ -1,50 +1,41 @@
 {% extends 'base.html' %}
    {% block content %}
-   <!DOCTYPE html>
-   <html lang="en">
-   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-   </head>
-   <body>
-    <div class="container">
+   <div class="container">
       <div class="row">
          <div class="col-lg-6 col-md-6 col-sm-12 p-3 d-flex justify-content-center">
-            <form action=""method="post" class="form w-50">
+            <form action="" method="post" class="form w-50">
                {% csrf_token %}
                <div class="my-3">
-                  <input type="text" name="task" placeholder="Task" class="form-control">
+                  <input type="text" name="task" placeholder="Task"class="form-control">
                </div>
                <div>
-                  <input type="number" name="priority" class="form-control" placeholder="priority">
+                  <input type="number" name="priority" class="form-control"placeholder="priority">
                </div>
                <div class="my-3 text-center">
                   <button class="btn btn-primary">add</button>
                </div>
             </form>
          </div>
-         <div class="col-lg-6 col-md-6 col-sm-12 p-3">
-            <h1 class="text-center">Task to be compleate</h1>
+         <div class="col-lg-6 col-md-6 col-sm12 p-3">
+            <h1 class="text-center">task to be compleat</h1>
             <div class="container">
-               {% for task in task%}
+               {% for task in tasks%}
                <div class="tasks d-flex justify-content-between flex-wrap">
                   <div class="child">{{task.task}}</div>
-                  <div class="child">
-                     <button class="btn btn-primary">update</button>
-                     <button class="btn btn-sucees">done</button>
-                  </div>
+                  <div class="child">{{priority.priority}}
+                     <a href="{% url 'update' task.id %}" class="btn btn-primary">update</a>
+                     <a class="btn btn-success">done</a>
+                  
                </div>
+               
                {% endfor %}
             </div>
          </div>
       </div>
-    </div>
+   </div>
    
     
-    
-   </body>
-   </html>
+
    {% endblock %}
 
 
