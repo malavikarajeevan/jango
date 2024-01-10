@@ -25,12 +25,13 @@
          <div class="col-lg-6 col-md-6 col-sm12 p-3">
             <h1 class=" row text-center">task to be compleat</h1>
             <div class="container">
-               {% for task in tasks%}
+               {% for task in tasks %}
                <div class="tasks d-flex justify-content-between flex-wrap">
                   <div class="child"><img src="{{task.image.url}}"alt="{{task.name}}"></div>
                   <div class="child">{{task.task}}</div>
                   <div class="child">{{priority.priority}}
                      <a href="{% url 'update' task.id %}" class="btn btn-primary">update</a>
+                     <a href="{% url 'delete' task.id %}" class="btn btn-primary">delete</a>
                      <a class="btn btn-success">delete</a>
                   
                </div>
