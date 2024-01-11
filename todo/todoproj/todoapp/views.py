@@ -20,7 +20,7 @@ def Home(req):
 
 def update(req,id):
     # print(id)
-    # task=Task.objects.get(id=id)
+    tasks=Task.objects.get(id=id)
     # if req.method=="POST":
     #     task=req.POST.get('task','')
     #     priority=req.POST.get('priority','')
@@ -28,13 +28,13 @@ def update(req,id):
     #     return redirect("home")
     #=========================================
     #django forms
-    f=TodoForm(req,POST or None,instance=tasks)
+    f=TodoForm(req.POST or None,instance=tasks)
     if f.is_valid():
         f.save()
         return redirect("home")
     
-    # return render(req,'update.html',{"task":task})
-    return render(req, 'formupdate.html',{"task":tasks,'f':f})
+    # return render(req,'update.html',{"task":task,'f':f})
+    return render(req, 'formUpdate.html',{"task":tasks,'f':f})
 
 def delete(req,id):
     task=Task.objects.get(id=id)
